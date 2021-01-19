@@ -37,31 +37,25 @@ function pageLoad() {
 
   if(database.promotions[promotion1Index].type=='shipping'){
     promotion1Icon = '🚛'
-  }
-  if(database.promotions[promotion1Index].type=='discount'){
+  }else if(database.promotions[promotion1Index].type=='discount'){
     promotion1Icon = '🤑'
-  }
-  if(database.promotions[promotion1Index].type=='contest'){
+  }else if(database.promotions[promotion1Index].type=='contest'){
     promotion1Icon = '🎰'
   }
 
   if(database.promotions[promotion2Index].type=='shipping'){
     promotion2Icon = '🚛'
-  }
-  if(database.promotions[promotion2Index].type=='discount'){
+  }else if(database.promotions[promotion2Index].type=='discount'){
     promotion2Icon = '🤑'
-  }
-  if(database.promotions[promotion2Index].type=='contest'){
+  }else if(database.promotions[promotion2Index].type=='contest'){
     promotion2Icon = '🎰'
   }
 
   if(database.promotions[promotion3Index].type=='shipping'){
     promotion3Icon = '🚛'
-  }
-  if(database.promotions[promotion3Index].type=='discount'){
+  }else if(database.promotions[promotion3Index].type=='discount'){
     promotion3Icon = '🤑'
-  }
-  if(database.promotions[promotion3Index].type=='contest'){
+  }else if(database.promotions[promotion3Index].type=='contest'){
     promotion3Icon = '🎰'
   }
 

@@ -26,6 +26,18 @@ let promotion3Icon          // expects a String (emoji)
 
 function pageLoad() {
   // 👇 YOUR CODE BEGINS HERE. DON'T CHANGE ANY OTHER CODE. 👇
+  numberOfProducts = database.products.length
+  products = database.products
+  promotion1Description = database.products[0].description
+  promotion2Description = database.products[1].description
+  promotion3Description = database.products[2].description
+  promotion1Icon = `<img src="${database.products[0].image}" class="inline w-16 die1">`
+  promotion2Icon = `<img src="${database.products[1].image}" class="inline w-16 die1">`
+  promotion3Icon = `<img src="${database.products[2].image}" class="inline w-16 die1">`
+
+  // console.log( numberOfProducts = database.products.length)
+
+
 
   // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
   console.log(database)

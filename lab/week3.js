@@ -28,12 +28,47 @@ function pageLoad() {
   // 👇 YOUR CODE BEGINS HERE. DON'T CHANGE ANY OTHER CODE. 👇
   numberOfProducts = database.products.length
   products = database.products
-  promotion1Description = database.products[0].description
-  promotion2Description = database.products[1].description
-  promotion3Description = database.products[2].description
-  promotion1Icon = `<img src="${database.products[0].image}" class="inline w-16 die1">`
-  promotion2Icon = `<img src="${database.products[1].image}" class="inline w-16 die1">`
-  promotion3Icon = `<img src="${database.products[2].image}" class="inline w-16 die1">`
+  promotion1Index = Math.floor(Math.random() * database.promotions.length )
+  promotion2Index = Math.floor(Math.random() * database.promotions.length )
+  promotion3Index = Math.floor(Math.random() * database.promotions.length )
+  promotion1Description = database.promotions[promotion1Index].description
+  promotion2Description = database.promotions[promotion2Index].description
+  promotion3Description = database.promotions[promotion3Index].description
+  // promotion1Description = database.products[0].description
+  // promotion2Description = database.products[1].description
+  // promotion3Description = database.products[2].description
+  if(database.promotions[promotion1Index].type=='shipping'){
+    promotion1Icon = '🚛'
+  }
+  if(database.promotions[promotion1Index].type=='discount'){
+    promotion1Icon = '🤑'
+  }
+  if(database.promotions[promotion1Index].type=='contest'){
+    promotion1Icon = '🎰'
+  }
+
+  if(database.promotions[promotion2Index].type=='shipping'){
+    promotion2Icon = '🚛'
+  }
+  if(database.promotions[promotion2Index].type=='discount'){
+    promotion2Icon = '🤑'
+  }
+  if(database.promotions[promotion2Index].type=='contest'){
+    promotion2Icon = '🎰'
+  }
+
+  if(database.promotions[promotion3Index].type=='shipping'){
+    promotion3Icon = '🚛'
+  }
+  if(database.promotions[promotion3Index].type=='discount'){
+    promotion3Icon = '🤑'
+  }
+  if(database.promotions[promotion3Index].type=='contest'){
+    promotion3Icon = '🎰'
+  }
+  // promotion1Icon = `<img src="${database.products[0].image}" class="inline w-16 die1">`
+  // promotion2Icon = `<img src="${database.products[1].image}" class="inline w-16 die1">`
+  // promotion3Icon = `<img src="${database.products[2].image}" class="inline w-16 die1">`
 
   // console.log( numberOfProducts = database.products.length)
 
